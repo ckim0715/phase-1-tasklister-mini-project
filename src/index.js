@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector('form');
   const list = document.querySelector('#tasks');
 
+// add priorities:
+
   let addPriority = document.createElement('select');
   let opt1 = document.createElement('option')
   let opt2 = document.createElement('option')
@@ -22,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   addPriority.add(opt3)
 
   
-  
+// function to set color of output based on priority:
 const option = document.querySelector('option')
 
 function targetColor(){
@@ -35,7 +37,7 @@ function targetColor(){
   }
 }
   
-  
+ // submit event listener: 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const targetValue = e.target["new-task-description"].value
@@ -44,7 +46,7 @@ function targetColor(){
     
   
   })
-
+//function carried out in submit event listener:
   function toDoAction (action){
     let p = document.createElement('p');
     let btn = document.createElement('button');
@@ -57,7 +59,7 @@ function targetColor(){
     
   
   }
-  
+// function to delete (used by button click event listener):
   function deleteAction(e) {
     e.target.parentNode.remove();
   }  
@@ -65,6 +67,7 @@ function targetColor(){
   
 }
 );
+
 
 
 
